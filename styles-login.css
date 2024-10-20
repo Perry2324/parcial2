@@ -1,0 +1,46 @@
+body.login {
+    background-repeat: repeat; /* Repite la imagen hacia abajo */
+    background-size:cover; /* Cubre todo el ancho y alto del contenedor */
+    background-image: url("https://cdn.colombia.com/images/v2/colombia-info/simbolos/escudo/escudo-800.jpg"); /* Fondo claro para el login */
+}
+
+.container {
+    max-width: 500px; /* Limitar el ancho del contenedor */
+    margin: 100px auto; /* Centrar vertical y horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.479); /* Fondo blanco para el formulario */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra suave */
+}
+
+h1 {
+    color: #343a40; /* Color oscuro para el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+}
+
+.form-group label {
+    font-weight: bold; /* Etiquetas en negrita */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color del botón primario */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados en el botón */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.text-center p {
+    margin-top: 15px; /* Espacio arriba del texto de registro */
+}
+
+.text-center a {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.text-center a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}

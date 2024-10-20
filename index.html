@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenido a Pequeños Malitos</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/40/40188.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que esto esté después de Bootstrap -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+</head>
+<body class="index">
+    <div class="container">
+        <h1 class="mt-5">Bienvenido a la Cárcel "Pequeños Malitos"</h1>
+        <p class="text-center">Nuestra misión es la rehabilitación y reintegración social de los jóvenes en conflicto con la ley.</p>
+
+        <div class="text-center mb-4">
+            <a href="login.html" class="btn btn-primary mr-2">Iniciar Sesión</a> <!-- Enlace a login.html -->
+            <a href="registro.html" class="btn btn-secondary">Registrarse</a> <!-- Enlace a registro.html -->
+        </div>
+
+        <h2 class="mt-5">Historia</h2>
+        <p>
+            La cárcel "Pequeños Malitos" fue inaugurada hace 50 años con el objetivo de proporcionar un entorno seguro y rehabilitador para jóvenes en conflicto con la ley. Desde su apertura, ha pasado por varias transformaciones, comenzando como un pequeño centro de detención y evolucionando hacia un sistema integral de rehabilitación.
+        </p>
+        <p>
+            A lo largo de los años, la cárcel ha implementado diversos programas educativos y de desarrollo personal que han permitido a miles de jóvenes reinsertarse en la sociedad. En la década de 1980, se introdujeron programas de formación laboral que ofrecían a los internos habilidades prácticas en campos como la carpintería y la tecnología. 
+        </p>
+        <p>
+            En 1995, se amplió la infraestructura, con la adición de aulas y espacios recreativos, lo que permitió el inicio de programas de educación formal. Desde entonces, "Pequeños Malitos" se ha convertido en un modelo de rehabilitación y ha sido reconocido por su enfoque innovador en la reintegración social.
+        </p>
+        <p>
+            Hoy en día, la cárcel se enorgullece de su compromiso con la educación y el desarrollo personal, ayudando a los jóvenes a superar sus desafíos y construir un futuro mejor.
+        </p>
+
+        <h2 class="mt-5">Misión</h2>
+        <p>
+            Nuestra misión es proporcionar un entorno seguro y educativo que promueva el desarrollo personal, la educación y la reintegración social de los reclusos. Nos esforzamos por ofrecer programas que aborden las necesidades individuales de cada interno, facilitando su rehabilitación y el aprendizaje de habilidades que les permitan reintegrarse a la sociedad con éxito.
+        </p>
+
+        <h2 class="mt-5">Visión</h2>
+        <p>
+            Nuestra visión es ser un modelo en la rehabilitación de jóvenes en conflicto con la ley, contribuyendo a una sociedad más justa y equitativa. Aspiramos a ser un referente en el uso de métodos innovadores para la reintegración social, trabajando en colaboración con la comunidad y las instituciones educativas para ofrecer oportunidades de crecimiento y desarrollo.
+        </p>
+
+        <h2 class="mt-5">Nuestras Sedes</h2>
+        <div class="row mt-4">
+            <div class="row mt-4">
+                <!-- Columna para la lista de sedes -->
+                <div class="col-md-6 col-12"> <!-- Ocupa la mitad del ancho en pantallas medianas, el 100% en pantallas pequeñas -->
+                    <h4>Lista de Sedes</h4>
+                    <ul>
+                        <li id="bogota">Bogotá</li>
+                        <li id="cali">Cali</li>
+                        <li id="tunja">Tunja</li>
+                        <li id="barranquilla">Barranquilla</li>
+                        <li id="cartagena">Cartagena</li>
+                        <li id="girardot">Girardot</li>
+                    </ul>
+                </div>
+            
+                <!-- Columna para el mapa -->
+                <div class="col-md-6 col-12"> <!-- Ocupa la mitad del ancho en pantallas medianas, el 100% en pantallas pequeñas -->
+                    <div id="map"></div>
+                </div>
+            </div>
+            
+            <div class="col-md-2">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 text-center">
+        <div>
+            <h4>Síguenos en nuestras redes sociales</h4>
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </div>
+        <div>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+        <p>&copy; 2024 Cárcel "Pequeños Malitos". Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Incluye el archivo JavaScript externo -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY4S3iCuhstYK8ci9Bf65ZSWrk9unUwjg&callback=iniciarMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

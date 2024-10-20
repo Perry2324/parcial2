@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cssvisit.css"> <!-- Enlace a tu CSS personalizado -->
+    <title>Visitantes - Pequeños Malitos</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f8f9fa;">
+        <a class="navbar-brand" href="#">Pequeños Malitos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#agendar-visita">Agendar Visita</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#actividades">Actividades</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="cerrarSesion();">Cerrar Sesión</a> <!-- Opción de Cerrar Sesión -->
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5" id="agendar-visita">
+        <h1 class="text-center">Agendar Visita</h1>
+        <form id="visitasForm" onsubmit="return generarVisita(event);">
+            <div class="form-group">
+                <label for="idReclusoVisita">ID del Recluso:</label>
+                <input type="text" class="form-control" id="idReclusoVisita" required>
+            </div>
+            <div class="form-group">
+                <label for="nombreVisitante">Nombre del Visitante:</label>
+                <input type="text" class="form-control" id="nombreVisitante" required>
+            </div>
+            <div class="form-group">
+                <label for="fechaVisita">Fecha de Visita:</label>
+                <input type="date" class="form-control" id="fechaVisita" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+        </form>
+    </div>
+
+    <div class="container mt-5" id="actividades">
+        <h2 class="text-center">Actividades de la Prisión</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://th.bing.com/th/id/OIP.-q9majsGmqfQy7aMfp28NwHaFj?rs=1&pid=ImgDetMain" class="card-img-top" alt="Actividad 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Taller de Artes</h5>
+                        <p class="card-text">Los reclusos participan en talleres de arte para expresar su creatividad y aprender nuevas habilidades.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://th.bing.com/th/id/OIP.-q9majsGmqfQy7aMfp28NwHaFj?rs=1&pid=ImgDetMain" class="card-img-top" alt="Actividad 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Programas de Educación</h5>
+                        <p class="card-text">Se ofrecen programas educativos para ayudar a los reclusos a obtener su diploma de secundaria y habilidades profesionales.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://th.bing.com/th/id/OIP.-q9majsGmqfQy7aMfp28NwHaFj?rs=1&pid=ImgDetMain" class="card-img-top" alt="Actividad 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Actividades Recreativas</h5>
+                        <p class="card-text">Se organizan actividades recreativas como deportes y juegos para fomentar la cohesión y el bienestar entre los reclusos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pequeños Malitos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function generarVisita(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe de la manera tradicional
+            alert('La solicitud fue generada');
+
+            // Limpiar el formulario
+            document.getElementById('visitasForm').reset();
+        }
+
+        function cerrarSesion() {
+            // Aquí puedes eliminar datos de sesión o redirigir a otra página
+            // Si estás usando localStorage para guardar el estado de sesión
+            localStorage.removeItem('usuario'); // Suponiendo que 'usuario' es la clave que usas para almacenar datos del usuario
+            alert('Has cerrado sesión');
+            // Redirigir a la página de inicio o de login
+            window.location.href = 'index.html'; // Cambia esto a la página deseada
+        }
+    </script>
+</body>
+
+</html>
